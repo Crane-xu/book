@@ -1,0 +1,21 @@
+.bookshow{
+    list-style: none;
+    padding-left: 10%;
+}
+.bookshow h3:hover{
+    color: blue;
+    cursor: pointer;
+}
+.bookshow img:hover{
+    cursor: pointer;
+}
+.bookdetail{
+    list-style: none;
+    margin: 20px 50px;
+}
+.bookdetail li{
+    padding-top: 1%;
+}
+.column{
+    line-height: 2;
+}

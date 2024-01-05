@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    color: wheat;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(120deg,#3498db,#8e44ad);
+}
+.main{
+    padding: 5px;
+    width: 260px;
+    /* height: 600px; */
+    border: 1px solid;
+    background-color: cornflowerblue;
+    border-radius: 7px;
+}
+span{
+    font-size: 60px;
+    font-family: '隶书';
+}
+.input_box{
+    position: relative;
+    width: 100%;
+}
+.input_box input::placeholder{
+    color: yellowgreen;
+}
+.input_box input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    background-color: transparent;
+}
+.input_box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: sienna;
+    padding: 10px 0;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+
+.input_box input:focus + label,
+.input_box input:valid + label{
+    top: -25px;
+    color: wheat;
+}
+.btn {
+    width: 48.5%;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    color: brown;
+    outline: none;
+    background-color: transparent;
+}
+.btn:hover{
+    background-color: wheat;
+}

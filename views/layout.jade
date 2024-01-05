@@ -1,0 +1,45 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    //- title 书阁
+    block head
+    //- 标签页图标
+    link(rel='icon' href='/images/icons8.png' type='image/x-icon')
+    link(rel='stylesheet' href='/stylesheets/index.css')
+    script(src='/javascripts/index.js')
+    script(src='/javascripts/index_animation.js') 
+  body
+    .main
+      header.header
+        .left_logo
+          img(src='/images/logo.png' alt='logo' onclick='homepage()')
+        .right_visitor
+          #{visitor1}
+          #{visitor2}
+      .container
+        -
+          const navs = [
+            {title:'文学艺术',category:'a',menus:['青春文学', '传记', '小说', '动漫艺术']},
+            {title:'科学技术',category:'b',menus:['计算机网络', '医学', '科普读物', '工农林']},
+            {title:'教育考试',category:'c',menus:['外语考试', '教材', '工具书']},
+            {title:'人文社科',category:'d',menus:['历史', '心理', '哲学宗教', '文化古籍']},
+          ];
+        ul.nav
+          li
+            span(onclick='homepage()') 主页
+          each nav in navs
+            li
+              span.firstmenu= nav.title
+              .secondmenu
+                each val, index in nav.menus
+                  a(href='/category/'+ nav.category + (index + 1))= val
+                  br
+        block content
+      footer.footer
+        .link
+          each val in ['关于我们', '联系客服', '版权声明', 'CopyRight©书阁']
+            li
+              a(href='#')=val

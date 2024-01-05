@@ -1,0 +1,54 @@
+extends layout.jade
+
+append head
+  title 书阁
+
+block content
+  .midleft
+    .cshow
+      h2.word
+      img.carousel(src='/images/2.jpg' alt='图片')
+    .recommend
+      h2 新书首发
+      .rbook
+        img(src="/images/book28.jpg", alt="pitcure")
+        a(href="/category/book/28")
+          p 西藏生死书
+      .rbook
+        img(src="/images/book13.jpg", alt="pitcure")
+        a(href="/category/book/13")
+          p  人类简史
+      .rbook
+        img(src="/images/book1.jpg", alt="pitcure")
+        a(href="/category/book/1")
+          p  你当想鸟飞往你的山
+      .rbook
+        img(src="/images/book11.jpg", alt="pitcure")
+        a(href="/category/book/11")
+          p 我们为什么会生病
+      .rbook
+        img(src="/images/book24.jpg", alt="pitcure")
+        a(href="/category/book/24")
+          p  史记
+      .rbook
+        img(src="/images/book25.jpg", alt="pitcure")
+        a(href="/category/book/25")
+          p  蛤蟆先生去看心理医生
+  .topic
+    h2 话题热榜
+    li
+      h3(onclick='incomment(1)') #福尔摩斯探案全集#
+      img(src='/images/3.png' alt='图片' onclick='incomment(1)')
+      p 福尔摩斯探案全集1·血字的研究、四签名
+    li
+      h3(onclick='incomment(2)') #CSS禅意花园#
+      img(src='/images/4.jpg' alt='图片' onclick='incomment(2)')
+      p 每章剖析“CSS禅意花园”收录的6件设计作品，这些作品围绕一个主要的设计概念展开，如文字的使用等。
+    li
+      h3(onclick='incomment(3)') #我是猫#
+      img(src='/images/5.png' alt='图片' onclick='incomment(3)')
+      p 这是一只一位穷教师家的猫，善于思索、有见识、富有正义感又具有文人气质、但至死也没有学会捕捉老鼠的猫。
+    li
+      h3(onclick='incomment(4)') #三体Ⅲ·死神永生#
+      img(src='/images/6.png' alt='图片' onclick='incomment(4)')
+      p 身患绝症的云天明买下一颗星星送给暗恋着的大学同学程心，而程心因参与（PIA）向三体舰队发射探测器的工作，却想让航天专业背景的他...

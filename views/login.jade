@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title 登录
+    script(src='/javascripts/login.js')
+    link(rel='icon' href='/images/icons8.png' type='image/x-icon')
+    link(rel='stylesheet' href='/stylesheets/login-register.css')
+  body
+    .main
+      span 登录
+      br
+      br
+      form
+        .input_box
+          input(type='text' name='loginid' autocomplete='off' required='required')
+          label(for='loginid') 用户名
+        .input_box
+          input(type='password' name='login_pwd' required='required')
+          label(for='login_pwd') 密码
+        input.btn(type='button' value='确认' onclick='login()')
+        input.btn(type='button' value='返回' onclick='comeback()')
+        br
+        br
+        |             没有账号，去
+        a(href='register') 注册

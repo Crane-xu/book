@@ -1,0 +1,15 @@
+extends layout.jade
+
+append head
+  title #{data.title}
+  link(rel='stylesheet' href='/stylesheets/comment.css')
+  script(src='/javascripts/comment.js')
+block content
+  section.commentarea
+    h1 #{data.title}
+    img(src="/images/3.png", alt="图片")
+    ul.commentlist#commentlist
+      li 这是第一条评论
+    textarea#commentbox(name="commentbox", cols="30", rows="4" placeholder="请输入评论...")
+    .btnarea
+      button.btn#btndiscuss(onclick='discuss()') 发表评论

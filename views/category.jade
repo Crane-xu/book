@@ -1,0 +1,21 @@
+extends layout.jade
+
+append head
+  title #{data.title}
+  link(rel='stylesheet' href='/stylesheets/book.css')
+
+block content
+  ul.bookshow
+    each book in data.books
+      li
+        h3(onclick='bookdetail('+book.id+')')= book.name
+        br
+        img(src='/images/book'+book.id+'.jpg' alt='图书' onclick='bookdetail('+book.id+')')
+        br
+        br
+        p= book.author
+        p= book.desc
+      li
+        p
+        br
+        br
